@@ -12,7 +12,6 @@ const PokeInfo = (props) => {
       const res = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
       );
-      console.log(res.data);
       setPokemonInfo(res.data);
       setLoading(false);
     } catch {
@@ -20,7 +19,6 @@ const PokeInfo = (props) => {
       setError(true);
     }
   };
-  console.log(pokemonInfo);
   useEffect(() => {
     getPokemonInfo();
   }, []);
